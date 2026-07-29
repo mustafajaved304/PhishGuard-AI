@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard AI | Intelligent Phishing Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- HERO SECTION -->
+
+    <section class="developer-banner fade-in">
+
+        <h3>CYBER SECURITY SEMESTER PROJECT</h3>
+
+        <h1 class="glow">PHISHGUARD AI</h1>
+
+        <h2>Intelligent Phishing Detection Platform</h2>
+
+        <p>
+            Detect phishing websites, malicious emails and scam SMS messages
+            using an intelligent rule-based detection engine that helps improve
+            cybersecurity awareness and online safety.
+        </p>
+
+        <br><br>
+
+        <h3>👨‍💻 Developed & Designed By</h3>
+
+        <h1 style="font-size:60px;color:#00E5FF;">
+            MUSTAFA MEHMOOD JAVED
+        </h1>
+
+        <h2>BS Cyber Security</h2>
+
+        <div class="tech-stack">
+
+            <div class="tech">
+                <i class="fa-brands fa-python"></i> Python
+            </div>
+
+            <div class="tech">
+                <i class="fa-solid fa-bolt"></i> Flask
+            </div>
+
+            <div class="tech">
+                <i class="fa-brands fa-html5"></i> HTML5
+            </div>
+
+            <div class="tech">
+                <i class="fa-brands fa-css3-alt"></i> CSS3
+            </div>
+
+            <div class="tech">
+                <i class="fa-brands fa-js"></i> JavaScript
+            </div>
+
+            <div class="tech">
+                <i class="fa-solid fa-shield-halved"></i> Cyber Security
+            </div>
+
+        </div>
+
+        <div class="banner-buttons">
+
+            <a href="/analyzer" class="primary-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Analyze Now
+            </a>
+
+            <a href="/about" class="secondary-btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="card">
+
+            <i class="fa-solid fa-link fa-3x"></i>
+
+            <h2>URL Analyzer</h2>
+
+            <p>
+                Detect fake websites, suspicious domains,
+                shortened URLs and phishing indicators.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-envelope fa-3x"></i>
+
+            <h2>Email Analyzer</h2>
+
+            <p>
+                Identify phishing emails,
+                spoofing attempts and malicious attachments.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-mobile-screen-button fa-3x"></i>
+
+            <h2>SMS Analyzer</h2>
+
+            <p>
+                Detect banking scams,
+                fake OTP requests and suspicious SMS messages.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="features">
+
+        <div class="card">
+
+            <h1>1250+</h1>
+
+            <p>URLs Scanned</p>
+
+        </div>
+
+        <div class="card">
+
+            <h1>840+</h1>
+
+            <p>Emails Checked</p>
+
+        </div>
+
+        <div class="card">
+
+            <h1>610+</h1>
+
+            <p>SMS Analyzed</p>
+
+        </div>
+
+        <div class="card">
+
+            <h1>432</h1>
+
+            <p>Threats Detected</p>
+
+        </div>
+
+    </section>
+
+    <!-- HOW IT WORKS -->
+
+    <section class="features">
+
+        <div class="card">
+
+            <h2>1️⃣ Paste</h2>
+
+            <p>Paste a URL, Email or SMS.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>2️⃣ Scan</h2>
+
+            <p>PhishGuard AI checks multiple phishing indicators.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>3️⃣ Detect</h2>
+
+            <p>Risk score and threat level are calculated.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>4️⃣ Protect</h2>
+
+            <p>Receive security recommendations instantly.</p>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="developer-banner" style="min-height:60vh;">
+
+        <h1>Think Before You Click</h1>
+
+        <h2>Protect Yourself From Phishing Attacks</h2>
+
+        <p>
+
+            Every phishing attack begins with a single click.
+            Stay protected by analyzing suspicious content
+            before opening links or sharing sensitive information.
+
+        </p>
+
+        <div class="banner-buttons">
+
+            <a href="/analyzer" class="primary-btn">
+
+                Start Analysis
+
+            </a>
+
+        </div>
+
+    </section>
+
+    {% include 'footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

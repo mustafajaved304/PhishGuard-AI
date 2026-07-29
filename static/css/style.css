@@ -1,0 +1,1091 @@
+/* =========================================================
+   PHISHGUARD AI
+   PREMIUM CYBER SECURITY THEME
+   Developed by Mustafa Mehmood Javed
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background:#07111F;
+
+    background-image:
+    radial-gradient(circle at top left,#00e5ff22 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#0066ff22 0%,transparent 35%),
+    linear-gradient(135deg,#07111F,#0B1930,#07111F);
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081524;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00E5FF;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#42F5FF;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(7,17,31,.92);
+
+    backdrop-filter:blur(15px);
+
+    z-index:9999;
+
+    border-bottom:1px solid rgba(0,229,255,.15);
+
+}
+
+.logo{
+
+    color:#00E5FF;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+nav ul li a:hover{
+
+    color:#00E5FF;
+
+}
+
+nav button{
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+    border:none;
+
+    padding:12px 28px;
+
+    border-radius:35px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+nav button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px #00E5FF;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.developer-banner{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:120px 10% 80px;
+
+}
+
+.developer-banner h3{
+
+    color:#00E5FF;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.developer-banner h1{
+
+    font-size:78px;
+
+    margin-bottom:20px;
+
+    text-shadow:0 0 25px #00E5FF;
+
+}
+
+.developer-banner h2{
+
+    color:#00E5FF;
+
+    margin-bottom:25px;
+
+}
+
+.developer-banner p{
+
+    max-width:900px;
+
+    color:#d5e5f4;
+
+    font-size:20px;
+
+}
+
+/* ===========================
+   TECH STACK
+=========================== */
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+.tech{
+
+    padding:14px 28px;
+
+    border:1px solid #00E5FF;
+
+    border-radius:40px;
+
+    color:#00E5FF;
+
+    background:rgba(255,255,255,.04);
+
+    transition:.3s;
+
+}
+
+.tech:hover{
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+    transform:translateY(-5px);
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.primary-btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:16px 38px;
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+    box-shadow:0 0 20px rgba(0,229,255,.45);
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 35px #00E5FF;
+
+}
+
+.secondary-btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    margin-left:15px;
+
+    padding:16px 38px;
+
+    border:2px solid #00E5FF;
+
+    color:#00E5FF;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.35s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+}
+/* =========================================================
+   FEATURES SECTION
+========================================================= */
+
+.features{
+
+    width:90%;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,229,255,.2);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00E5FF;
+
+    box-shadow:0 0 35px rgba(0,229,255,.35);
+
+}
+
+.card h1{
+
+    color:#00E5FF;
+
+    margin:15px 0;
+
+    font-size:45px;
+
+}
+
+.card h2{
+
+    color:#00E5FF;
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:#D5E5F4;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* =========================================================
+   ANALYZER PAGE
+========================================================= */
+
+.analyzer-container{
+
+    width:80%;
+
+    max-width:950px;
+
+    margin:130px auto 70px;
+
+    padding:45px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    border:1px solid rgba(0,229,255,.2);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.analyzer-container h1{
+
+    text-align:center;
+
+    color:#00E5FF;
+
+    margin-bottom:25px;
+
+    font-size:45px;
+
+}
+
+.analyzer-container label{
+
+    display:block;
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+    color:#00E5FF;
+
+    font-weight:bold;
+
+}
+
+.analyzer-container select,
+
+.analyzer-container textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0F223A;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    margin-bottom:20px;
+
+}
+
+.analyzer-container textarea{
+
+    height:220px;
+
+    resize:none;
+
+}
+
+.analyzer-container button{
+
+    width:100%;
+
+    padding:18px;
+
+    font-size:18px;
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:bold;
+
+}
+
+.analyzer-container button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px #00E5FF;
+
+}
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-card{
+
+    width:80%;
+
+    max-width:950px;
+
+    margin:130px auto;
+
+    padding:45px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:20px;
+
+    border:1px solid rgba(0,229,255,.25);
+
+    backdrop-filter:blur(16px);
+
+}
+
+.score{
+
+    width:170px;
+
+    height:170px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:8px solid #00E5FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:#00E5FF;
+
+    box-shadow:0 0 35px rgba(0,229,255,.35);
+
+}
+
+.level{
+
+    margin-top:18px;
+
+    font-size:22px;
+
+    color:#D5E5F4;
+
+}
+
+.safe{
+
+    color:#2ECC71;
+
+}
+
+.medium{
+
+    color:#F1C40F;
+
+}
+
+.high{
+
+    color:#E67E22;
+
+}
+
+.critical{
+
+    color:#E74C3C;
+
+}
+
+/* =========================================================
+   TABLES
+========================================================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+th{
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+    padding:16px;
+
+}
+
+td{
+
+    padding:16px;
+
+    background:#10233A;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+}
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+.reason-list{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.reason-list li{
+
+    margin-bottom:12px;
+
+    color:#D5E5F4;
+
+    line-height:1.8;
+
+}
+
+/* =========================================================
+   ABOUT & CONTACT
+========================================================= */
+
+.page-container{
+
+    width:85%;
+
+    max-width:1000px;
+
+    margin:130px auto;
+
+}
+
+.page-container h1{
+
+    color:#00E5FF;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+.page-container p{
+
+    color:#D5E5F4;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+    margin-top:80px;
+
+    background:#050C18;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(0,229,255,.15);
+
+}
+
+footer h2{
+
+    color:#00E5FF;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#B7C9D9;
+
+    line-height:1.8;
+
+}
+
+footer small{
+
+    color:#7F95AA;
+
+}
+/* =========================================================
+   PART 3 - ANIMATIONS & RESPONSIVE DESIGN
+========================================================= */
+
+/* Fade Animation */
+
+.fade-in{
+
+    animation:fadeIn 1s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Floating Animation */
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* Glow Animation */
+
+.glow{
+
+    animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:0 0 10px #00E5FF;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px #00E5FF,
+        0 0 40px #00E5FF,
+        0 0 60px #00E5FF;
+
+    }
+
+}
+
+/* Hover Scale */
+
+.card:hover{
+
+    transform:translateY(-12px) scale(1.02);
+
+}
+
+.tech:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+}
+
+/* Loading Screen */
+
+#loadingOverlay{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(5,15,30,.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.loader-box{
+
+    text-align:center;
+
+}
+
+.loader-box h2{
+
+    color:#00E5FF;
+
+    margin-bottom:20px;
+
+}
+
+.loader-box p{
+
+    color:white;
+
+    margin-top:20px;
+
+}
+
+.spinner{
+
+    width:80px;
+
+    height:80px;
+
+    border:8px solid rgba(255,255,255,.2);
+
+    border-top:8px solid #00E5FF;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* Section Headings */
+
+section h1{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+section h2{
+
+    font-size:30px;
+
+}
+
+section{
+
+    padding:40px 0;
+
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* Links */
+
+a{
+
+    transition:.3s;
+
+}
+
+/* Mobile Responsive */
+
+@media(max-width:992px){
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .developer-banner h1{
+
+        font-size:52px;
+
+    }
+
+    .developer-banner h2{
+
+        font-size:26px;
+
+    }
+
+    .developer-banner p{
+
+        font-size:18px;
+
+    }
+
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .analyzer-container{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+    .result-card{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .developer-banner{
+
+        padding-top:140px;
+
+    }
+
+    .developer-banner h1{
+
+        font-size:40px;
+
+    }
+
+    .developer-banner h2{
+
+        font-size:22px;
+
+    }
+
+    .developer-banner h3{
+
+        font-size:16px;
+
+    }
+
+    .primary-btn,
+
+    .secondary-btn{
+
+        display:block;
+
+        margin:15px auto;
+
+        width:90%;
+
+        text-align:center;
+
+    }
+
+    .score{
+
+        width:140px;
+
+        height:140px;
+
+        font-size:34px;
+
+    }
+
+    table{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* Selection */
+
+::selection{
+
+    background:#00E5FF;
+
+    color:#07111F;
+
+}

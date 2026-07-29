@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard AI | Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<section class="analyzer-container fade-in">
+
+    <h1>
+
+        🛡️ PhishGuard AI Analyzer
+
+    </h1>
+
+    <p style="text-align:center;margin-bottom:35px;color:#C6D6E4;">
+
+        Analyze suspicious URLs, Emails and SMS messages
+        using our intelligent phishing detection engine.
+
+    </p>
+
+    <form action="/analyze" method="POST">
+
+        <label>
+
+            Select Analysis Type
+
+        </label>
+
+        <select name="type" required>
+
+            <option value="url">
+
+                🌐 URL Phishing Detection
+
+            </option>
+
+            <option value="email">
+
+                📧 Email Phishing Detection
+
+            </option>
+
+            <option value="sms">
+
+                📱 SMS Scam Detection
+
+            </option>
+
+        </select>
+
+        <label>
+
+            Paste your content below
+
+        </label>
+
+        <textarea
+
+            name="text"
+
+            placeholder="Example:
+
+https://paypal-login-secure.com
+
+OR
+
+Paste suspicious email here...
+
+OR
+
+Paste suspicious SMS here..."
+
+            required>
+
+        </textarea>
+
+        <button type="submit">
+
+            🔍 Analyze Now
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ================================= -->
+<!-- FEATURES -->
+<!-- ================================= -->
+
+<section class="features">
+
+<div class="card">
+
+<h2>
+
+🌐 URL Analysis
+
+</h2>
+
+<p>
+
+Checks HTTPS,
+IP Address,
+Suspicious Keywords,
+Long URLs,
+Shortened Links,
+Special Characters
+and Subdomains.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+📧 Email Analysis
+
+</h2>
+
+<p>
+
+Detects urgency,
+password scams,
+bank fraud,
+spoofing attempts,
+gift scams
+and phishing language.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+📱 SMS Analysis
+
+</h2>
+
+<p>
+
+Identifies OTP scams,
+fake banking alerts,
+prize scams,
+verification fraud,
+and malicious links.
+
+</p>
+
+</div>
+
+</section>
+<!-- ================================= -->
+<!-- HOW DETECTION WORKS -->
+<!-- ================================= -->
+
+<section class="features">
+
+    <div class="card">
+
+        <h2>⚡ Fast Detection</h2>
+
+        <p>
+
+            The analyzer scans your input in seconds
+            using multiple phishing detection rules.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🛡️ Security Checks</h2>
+
+        <p>
+
+            URLs, Emails and SMS messages are checked
+            for suspicious indicators commonly used
+            by cyber criminals.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>📊 Risk Score</h2>
+
+        <p>
+
+            Every analysis generates a Risk Score,
+            Threat Level,
+            Detection Reasons
+            and Security Recommendations.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================================= -->
+<!-- THREAT LEVEL GUIDE -->
+<!-- ================================= -->
+
+<section class="features">
+
+    <div class="card">
+
+        <h2 style="color:#2ECC71;">
+
+            🟢 LOW
+
+        </h2>
+
+        <p>
+
+            Very few suspicious indicators detected.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2 style="color:#F1C40F;">
+
+            🟡 MEDIUM
+
+        </h2>
+
+        <p>
+
+            Some phishing indicators detected.
+
+            Verify carefully before trusting.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2 style="color:#E67E22;">
+
+            🟠 HIGH
+
+        </h2>
+
+        <p>
+
+            Strong phishing indicators detected.
+
+            Avoid interacting with the content.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2 style="color:#E74C3C;">
+
+            🔴 CRITICAL
+
+        </h2>
+
+        <p>
+
+            Highly dangerous.
+
+            Do not open links or provide credentials.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================================= -->
+<!-- SECURITY TIPS -->
+<!-- ================================= -->
+
+<section class="features">
+
+    <div class="card">
+
+        <h2>
+
+            💡 Cyber Security Tips
+
+        </h2>
+
+        <ul style="margin-top:20px; line-height:2;">
+
+            <li>✔ Always verify website domains.</li>
+
+            <li>✔ Never share passwords or OTPs.</li>
+
+            <li>✔ Enable Multi-Factor Authentication.</li>
+
+            <li>✔ Avoid clicking unknown links.</li>
+
+            <li>✔ Keep your browser updated.</li>
+
+            <li>✔ Verify the sender before responding.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- ================================= -->
+<!-- CALL TO ACTION -->
+<!-- ================================= -->
+
+<section class="hero" style="min-height:40vh;">
+
+    <div class="hero-text">
+
+        <h1>
+
+            Stay Safe Online
+
+        </h1>
+
+        <p>
+
+            Phishing attacks are increasing every day.
+            Analyze suspicious content before clicking.
+
+        </p>
+
+        <a href="/" class="primary-btn">
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+    <div class="hero-image">
+
+        🔐
+
+    </div>
+
+</section>
+
+{% include 'footer.html' %}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

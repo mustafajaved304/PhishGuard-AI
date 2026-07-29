@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analysis Result | PhishGuard AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="result-card fade-in">
+
+    <h1 style="text-align:center; margin-bottom:20px; color:#00E5FF;">
+
+        🛡️ Analysis Completed
+
+    </h1>
+
+    <p style="text-align:center; color:#C6D6E4;">
+
+        Your submitted content has been analyzed successfully.
+
+    </p>
+
+    <br>
+
+    <table>
+
+        <tr>
+
+            <th>Analysis Type</th>
+
+            <td>{{ analysis_type.upper() }}</td>
+
+        </tr>
+
+        <tr>
+
+            <th>Submitted Input</th>
+
+            <td>{{ input_text }}</td>
+
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <div style="text-align:center;">
+
+        <div class="score">
+
+            {{ result.score }}%
+
+        </div>
+
+        <div class="level">
+
+            Threat Level
+
+        </div>
+
+        {% if result.level == "Low" %}
+
+            <h2 class="safe">
+
+                🟢 LOW
+
+            </h2>
+
+        {% elif result.level == "Medium" %}
+
+            <h2 class="medium">
+
+                🟡 MEDIUM
+
+            </h2>
+
+        {% elif result.level == "High" %}
+
+            <h2 class="high">
+
+                🟠 HIGH
+
+            </h2>
+
+        {% else %}
+
+            <h2 class="critical">
+
+                🔴 CRITICAL
+
+            </h2>
+
+        {% endif %}
+
+    </div>
+
+    <br><br>
+
+    <h2>
+
+        Detection Reasons
+
+    </h2>
+
+    <ul class="reason-list">
+
+        {% for reason in result.reasons %}
+
+        <li>
+
+            ✔ {{ reason }}
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+    <br>
+        <h2>
+
+        🛡 Security Recommendations
+
+    </h2>
+
+    <ul class="reason-list">
+
+        <li>✔ Always verify the website domain before entering credentials.</li>
+
+        <li>✔ Never click suspicious links received via Email or SMS.</li>
+
+        <li>✔ Enable Multi-Factor Authentication (MFA).</li>
+
+        <li>✔ Keep your operating system and browser updated.</li>
+
+        <li>✔ Never share passwords, OTPs or banking information.</li>
+
+        <li>✔ Verify the sender before downloading attachments.</li>
+
+        <li>✔ Report phishing websites to your organization or browser.</li>
+
+    </ul>
+
+    <br><br>
+
+    <h2>
+
+        📊 Threat Level Guide
+
+    </h2>
+
+    <table>
+
+        <tr>
+
+            <th>Risk Score</th>
+
+            <th>Threat Level</th>
+
+        </tr>
+
+        <tr>
+
+            <td>0 - 39</td>
+
+            <td class="safe">🟢 Low</td>
+
+        </tr>
+
+        <tr>
+
+            <td>40 - 59</td>
+
+            <td class="medium">🟡 Medium</td>
+
+        </tr>
+
+        <tr>
+
+            <td>60 - 79</td>
+
+            <td class="high">🟠 High</td>
+
+        </tr>
+
+        <tr>
+
+            <td>80 - 100</td>
+
+            <td class="critical">🔴 Critical</td>
+
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+
+        <a href="/analyzer" class="primary-btn">
+
+            🔄 Analyze Another
+
+        </a>
+
+        <a href="/" class="secondary-btn">
+
+            🏠 Home
+
+        </a>
+
+    </div>
+
+</div>
+
+<section class="features">
+
+    <div class="card">
+
+        <h2>
+
+            📌 Summary
+
+        </h2>
+
+        <p>
+
+            This report was generated using PhishGuard AI's
+            intelligent rule-based phishing detection engine.
+            The analysis is based on common phishing indicators
+            including suspicious keywords, URLs, HTTP usage,
+            IP addresses, urgency words, spoofing indicators
+            and social engineering patterns.
+
+        </p>
+
+    </div>
+
+</section>
+
+{% include 'footer.html' %}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

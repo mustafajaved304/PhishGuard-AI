@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="analyzer-container">
+
+<h1>About PhishGuard AI</h1>
+
+<p>
+
+PhishGuard AI is a rule-based phishing detection platform developed as a Cyber Security semester project.
+
+</p>
+
+<br>
+
+<h2>Features</h2>
+
+<ul>
+
+<li>✔ URL Phishing Detection</li>
+
+<li>✔ Email Phishing Detection</li>
+
+<li>✔ SMS Scam Detection</li>
+
+<li>✔ Risk Score Generation</li>
+
+<li>✔ Security Recommendations</li>
+
+</ul>
+
+</div>
+
+{% include 'footer.html' %}
+
+</body>
+</html>
